@@ -18,15 +18,33 @@ body {
 
 header {
     background-color: #3624477a;
-    
     padding: 5px;
     text-align: center;
 }
+h1 {
+    font-family: 'Roboto', 'Lato', sans-serif;
+    font-size: 60px;
+    color: #c2fcf2;
+    text-shadow: 0 0 10px #030303;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+header p {
+    font-family: 'Roboto', 'Lato', sans-serif;
+    font-size: 20px;
+    text-shadow: 0 0 10px #030303;
+    color: #c2fcf2;
+    cursor: pointer;
+}
+/* all Divs styling here */
 
-#start-quiz-area {
-    background-color: #3624477a;
-    padding: 10px;
-    min-height: 100%;
+#start-quiz-area, #quiz-area, #instruction-area,
+#completed-area,
+#reward-area {
+    background-color: #cfa0f13f;
+    padding: 30px;
+    /*min-height: 100%;*/
     text-align: center;
     margin: 0 auto;
     margin-top: 130px;
@@ -34,6 +52,54 @@ header {
     width: 60%;
     border-radius: 10px;
     box-shadow: 0 10px 10px #030303;
+}
+
+/*target all H2*/
+h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 25px;
+    color: #c2fcf2;
+    text-shadow: 0 0 10px #030303;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/*target all p*/
+p {
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    color: #c2fcf2;
+    text-shadow: 0 0 10px #030303;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    text-indent: 1em;
+    text-align: center;
+}
+
+/*Change button with hover effect*/
+button:hover {
+    background-color: #b872e9;
+    color: #030303;
+    transition: 0.3s;
+}
+
+button {
+    background-color: #483955f2;
+    color: #c2fcf2;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+/*Hidden class be hidden here from users*/
+.hidden {
+    display: none;
 }
 
 
@@ -76,4 +142,31 @@ footer {
     font-size: 160%;
     padding: 5%;
     color: #030303;
+}
+
+/*media querry for small screens*/
+@media only screen and (max-width: 400px) {
+  
+    header h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    header p {
+        font-size: 15px;
+    }
+    p {
+        font-size: 14px;
+    }
+    #start-quiz-area, #quiz-area, #instruction-area,
+    #completed-area,
+    #reward-area {
+        width: 60%;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    footer p {
+        font-size: 10px;
+    }
 }
