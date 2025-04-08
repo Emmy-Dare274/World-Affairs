@@ -1,4 +1,11 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![World Affairs! Logo]()
+
+
+# World Affairs Quiz Game!
+
+[World Affairs Quiz Game!](https://emmy-dare274.github.io/World-Affairs/) click the link to play quiz.
+
+
 
 Welcome USER_NAME,
 
