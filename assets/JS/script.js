@@ -6,6 +6,7 @@
  * - answers: an array of possible answers
  * - correctAnswer: the index of the correct answer in the answers array
  * Second Task
+ * Get all the references to the IDs in the HTML file
  * Quiz will be shuffled randomly to select 12 questions each time
  * Create a function to shuffle the questions
  * Create a function to display the questions and answers
