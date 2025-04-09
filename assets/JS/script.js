@@ -173,8 +173,105 @@ const questionBank = [{
 const playQuizBtn = document.getElementById('play-btn');
 const instructionBtn = document.getElementById('inst-btn');
 const backToQuizBtn = document.getElementById('back-btn');
-const playAgainBtn = document.getElementById('play-again-btn"');
+const playAgainBtn = document.getElementById('completed-area"');
 const quizLogo = document.getElementById('head-logo');
+
+// declare a variable for selected questions in the quiz
+let selectedQuestions = 0;
+// indicate the number of correct points
+let point = 0;
+
+
+// add event listener to display quiz button
+/*playQuizBtn.addEventListener('click', function() {
+    displayQuiz();
+});
+
+backToQuizBtn.addEventListener('click', function() {
+    document.getElementById('play-btn').classList.add('hidden');
+    document.getElementById('instruction-area').classList.remove('hidden');
+});
+
+// go to the main page when the play again button is clicked
+playAgainBtn.addEventListener('click', function() {
+    document.getElementById('completed-area').classList.add('hidden');
+    document.getElementById('back-btn').classList.remove('hidden');
+});
+// add event listener to start the main page when the logo is clicked
+quizLogo.addEventListener('click', function() {
+    displayQuiz();
+});
+
+*/
+
+
+
+// Function to display instruction and hide the quiz game area and Event listeners
+function displayInstructions() {
+    document.getElementById('start-quiz-area').classList.add('hidden');
+    document.getElementById('instruction-area').classList.remove('hidden');
+}
+
+instructionBtn.addEventListener('click', function() {
+    displayInstructions();
+});
+
+// Create a function that shuffles quiz game here; in a way that user has a new question every time
+
+function shuffleArray(array) {
+    return array.sort(() => Math.random() - 0.5);
+}
+
+// Function to start the quiz
+function displayQuiz() {
+    const shuffledQuestions = shuffleArray(questionBank);
+
+    // display an array of 12 questions
+    selectedQuestions = shuffledQuestions.slice(0, 12);
+    currentQuestion = 0;
+    point = 0;
+    displayQuestion();
+
+    document.getElementById('start-quiz-area').classList.add('hidden');
+    document.getElementById('quiz-area').classList.remove('hidden');
+}
+
+// Function to display the current question and answers
+function displayQuestion() {
+    const question = document.getElementById('quiz-area');
+    const quizAnswers = document.getElementById('options');
+    const pointEarned = document.getElementById('point');
+
+    // assign the question text
+    question.textContent = selectedQuestions[currentQuestion].question;
+    // remove all previous answers
+    quizAnswers.innerHTML = '';
+
+    // create and append buttons for each answer
+    selectedQuestions[currentQuestion].answers.forEach((answer, index) => {
+        const button = document.createElement('button');
+        button.textContent = answer;
+        button.addEventListener('click', () => checkAnswer(index));
+        quizAnswers.appendChild(button);
+    });
+    pointEarned.textContent = `Your current Points is: ${point} out of ${selectedQuestions}`;
+
+}
+
+// back to quiz button event listener added here
+/*backToQuizBtn.addEventListener('click', function() {
+    document.getElementById('instruction-area').classList.add('hidden');
+    document.getElementById('start-quiz-area').classList.remove('hidden');
+});*/
+// play again button event listener
+
+
+   
+
+
+
+
+
 
 
 
