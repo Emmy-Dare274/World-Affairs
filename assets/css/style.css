@@ -40,8 +40,7 @@ header p {
 /* all Divs styling here */
 
 #start-quiz-area, #quiz-area, #instruction-area,
-#completed-area,
-#reward-area {
+#completed-area {
     background-color: #cfa0f13f;
     padding: 30px;
     /*min-height: 100%;*/
@@ -160,13 +159,14 @@ footer {
         font-size: 14px;
     }
     #start-quiz-area, #quiz-area, #instruction-area,
-    #completed-area,
-    #reward-area {
+    #completed-area {
         width: 60%;
         margin-top: 40px;
         margin-bottom: 20px;
     }
     footer p {
         font-size: 10px;
+        margin-top: 15px;
+        margin-right: 20px;
     }
 }

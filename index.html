@@ -24,40 +24,44 @@
         <h1 class="head-logo">World Affairs</h1>
         <p><em>Test your knowledge of the world trivia affairs.</em></p>
     </header>
-    <!-- Create 5 divs of Quiz Game area including reward area. Hide the divs-->
+    <!-- Main Quiz: Create 4 divs of Quiz Game area including reward area. Hide the divs-->
     <main>
-        <!-- Div1:- Quiz Game Start section here-->
-         <div id="start-quiz-area">
-            <h2>Start Quiz Game!</h2>
-            <p>Welcome to the World Current Affairs Quiz! Think you’re up-to-date with global happenings? Put your knowledge to the test and see if you’ve got what it takes to get a reward!</p>
-            <button id="play-btn">Play Quiz</button>
-            <button id="inst-btn">Instructions</button>
-         </div>
+        <!-- Div1 in section:- Quiz Game Start section here-->
+         <section>
+            <div id="start-quiz-area">
+                <h2>Start Quiz Game!</h2>
+                <p>Welcome to the World Current Affairs Quiz! Think you’re up-to-date with global happenings? Put your knowledge to the test and see if you’ve got what it takes to get a reward!</p>
+                <button id="play-btn">Play Quiz</button>
+                <button id="inst-btn">Instructions</button>
+            </div>
+        </section>
          <!--Div2: Quiz Game area with questions and answers options, and point taken-->
-         <div id="quiz-area" class="hidden">
-            <h2 id="question-area">display question area</h2>
-            <div id="options"></div>
-            <p id="point">point</p>
-         </div>
+         <section>
+            <div id="quiz-area" class="hidden">
+                <h2 id="question-area">display question area</h2>
+                <div id="options"></div>
+                <p id="point">point</p>
+            </div>
+        </section>
          <!--Div3: Quiz Game Instructions area with back to quiz button-->
-         <div id="instruction-area" class="hidden">
-            <h4>Quiz Challenge Instructions!</h4>
-            <p><strong>Welcome to the World Affairs Trivia Quiz!</strong><br> Your mission is simple - but not easy: 
-            <br> Answer as many questions as you can, and aim to get at least 12 correct to unlock a delicious reward. <br> <strong>Goodluck, genius - </strong> Let the quiz begin.</p>
-            <button id="back-btn">Back to Quiz</button>
-         </div>
-         <!--Div4: Quiz Game Completed area with points displayed-->
+         <section>
+            <div id="instruction-area" class="hidden">
+                <h4>Quiz Challenge Instructions!</h4>
+                <p><strong>Welcome to the World Affairs Trivia Quiz!</strong><br> Your mission is simple - but not easy: 
+                <br> Answer as many questions as you can, and aim to get at least 12 correct to unlock a delicious reward. <br> <strong>Goodluck, genius - </strong> Let the quiz begin.</p>
+                <button id="back-btn">Back to Quiz</button>
+             </div>
+        </section>
+         <!--Div4: Quiz Game Completed & Reward for all 12 corrected quiz area with points displayed-->
+        <section>
             <div id="completed-area" class="hidden">
                 <h2>Quiz Completed!</h2>
+                <p><strong>Congratulations!</strong><em>Your seat is in a hall of genius! </em>You have earned a reward! <i class="fa-solid fa-cookie-bite"></i></i></p>
                 <p id="final-score"><span>Your final score is:</span> </p>
                 <button id="play-again-btn">Play Again</button>
             </div>
-         <!--Div5: Quiz Game Reward area-->
-         <div id="reward-area" class="hidden">
-            <h2>Congratulations!</h2>
-            <p><em>Your seat is in a hall of genius! </em>You have earned a reward! <i class="fa-solid fa-cookie-bite"></i></i></p>
-            <button id="back-btn">Back to Quiz</button>
-         </div>
+        </section>
+         
     </main>
 
     <footer>
@@ -94,7 +98,7 @@
                 </li>
             </ul>
             <!-- copyright section -->
-            <p class="copyright">&copy; World Affairs 2025! All rights reserved for learning purpose only.</p>
+            <p class="copyright">&copy; World Affairs 2025 by Emmanuel Oluwadare! All rights reserved for learning purpose only.</p>
         </section>
 
     </footer>
