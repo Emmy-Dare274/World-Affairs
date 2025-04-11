@@ -190,7 +190,9 @@ logo.addEventListener("click", function () {
 });
 
 
-// functions to shuffle array with Fisher Yates algorithm
+/**
+ * functions to shuffle array with Fisher Yates algorithm
+ */
 function shuffleArray(array) {
     return array.sort(() => Math.random() - 0.5);
 }
@@ -235,7 +237,7 @@ function showQuestion() {
 
         optionsContainer.appendChild(button);
     });
-    scoreElement.textContent = `${score} out of ${currentQuestion}`;
+    scoreElement.textContent = `${score} question(s) answered correctly out of ${currentQuestion} questions`;
 }
 
 // functions to check answers
@@ -268,7 +270,7 @@ function showFinalPage() {
     const finalScoreElement = document.getElementById("finalScore");
 
     //Update the text content of the final score element with the user's score
-    finalScoreElement.textContent = `You scored ${score} out of ${questions.length}`;
+    finalScoreElement.textContent = `You scored ${score} correctly out of ${questions.length} questions.`;
 
     //Hide the quiz page and show the final page
     document.getElementById("quizPage").classList.add("hidden");
