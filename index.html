@@ -28,19 +28,19 @@
     <main>
         <!-- Div1 in section:- Quiz Game Start section here-->
          <section>
-            <div id="home">
+            <div id="start-page">
                 <h2>Start Quiz Game!</h2>
                 <p>Welcome to the World Current Affairs Quiz! Think you’re up-to-date with global happenings? Put your knowledge to the test and see if you’ve got what it takes to get a reward!</p>
-                <button id="play-btn">Play Quiz</button>
+                <button id="startBtn">Play Quiz</button>
                 <button id="instructionBtn">Instructions</button>
             </div>
         </section>
-         <!--Div2: Quiz Game area with questions and answers options, and point taken-->
+         <!--Div2: Quiz Game page area with questions and answers options, and point taken-->
          <section>
-            <div id="quiz" class="hidden">
-                <h2 id="questionText">display question area</h2>
+            <div id="quizPage" class="hidden">
+                <h2 id="question">display question area</h2>
                 <div id="optionsContainer"></div>
-                <p>Score: <span id="currentScore">0</span>out of 12</p>
+                <p id="score"></p>
             </div>
         </section>
          <!--Div3: Quiz Game Instructions area with back to quiz button-->
@@ -56,9 +56,8 @@
         <section>
             <div id="final" class="hidden">
                 <h2>Quiz Completed!</h2>
-                <p>Your final score: <span id="finalScore">0</span> out of 12</p>
-                <p id="congratsMessage"></p>
-                <button id="restartBtn">Try Again</button>
+                <p><span id="finalScore"></span></p>
+                <button id="restartButton">Try Again</button>
             </div>
         </section>
          

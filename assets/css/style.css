@@ -39,7 +39,7 @@ header p {
 }
 /* all 4 Divs with ID styling here */
 
-#home, #quiz, #instructions,
+#start-page, #quizPage, #instructions,
 #final {
     background-color: #cfa0f13f;
     padding: 30px;
@@ -166,8 +166,8 @@ footer {
     p {
         font-size: 14px;
     }
-    #start-quiz-area, #quiz-area, #instruction-area,
-    #completed-area {
+    #start-page, #quizPage, #instructions,
+    #final {
         width: 60%;
         margin-top: 40px;
         margin-bottom: 20px;

@@ -9,9 +9,10 @@
  * 
  */
 
-// A bank for quiz question Bank with const array object
+// A bank for quiz question Bank with let and const array object
 
-const questionBank = [{
+let questions = [];
+const questionsBank = [{
     question: 'Which Scottish island recently introduced community ownership to resist corporate tourism development?',
     options: ['Isle of Skye', 'Eigg', 'Mull', 'Lewis'],
     correct: 'Eigg'
@@ -162,6 +163,150 @@ const questionBank = [{
     correct: 'Angkor Wat'
 }
 ];
+
+// Quiz app prepare
+
+//Link to elements with IDs
+const startButton = document.getElementById("startBtn");
+const instructionsButton = document.getElementById("instructionBtn");
+const restartButton = document.getElementById("restartButton");
+const backToStartButton = document.getElementById("backToHomeBtn");
+const logo = document.getElementById("head-logo");
+
+// App state variables
+let currentQuestion = 0;
+let score = 0;
+
+// add event listeners here
+
+startButton.addEventListener("click", function () {
+    startQuiz();
+});
+
+instructionsButton.addEventListener("click", function () {
+    showInstructions();
+});
+
+restartButton.addEventListener("click", function () {
+    restartQuiz();
+});
+
+backToStartButton.addEventListener("click", function () {
+    goToStart();
+});
+
+logo.addEventListener("click", function () {
+    goToStart();
+});
+
+
+// functions to shuffle array wit Fisher Yates
+function shuffleArray(array) {
+    return array.sort(() => Math.random() - 0.5);
+}
+
+// function to initialize game
+function startQuiz() {
+    const shuffledQuestions = shuffleArray(questionsBank);
+
+    //Set the questions array to the first 12 questions
+    questions = shuffledQuestions.slice(0, 12);
+    currentQuestion = 0;
+    score = 0;
+    showQuestion();
+
+    //Hide the start page and show the quiz page
+    document.getElementById("start-page").classList.add("hidden");
+    document.getElementById("quizPage").classList.remove("hidden");
+}
+
+// function to show quiz game
+function showQuestion() {
+    const questionElement = document.getElementById("question");
+    const optionsContainer = document.getElementById("optionsContainer");
+    const scoreElement = document.getElementById("score");
+
+    //Set the question text
+    questionElement.textContent = questions[currentQuestion].question;
+
+    //Clear previous options (if any)
+    optionsContainer.innerHTML = "";
+
+    //Create and append buttons for each option
+    questions[currentQuestion].options.forEach((option, index) => {
+
+        //Create a new button element
+        const button = document.createElement("button");
+
+        //Set the button text to the current option
+        button.textContent = option;
+
+        button.addEventListener("click", () => checkAnswer(index));
+
+        optionsContainer.appendChild(button);
+    });
+    scoreElement.textContent = `${score} out of ${currentQuestion}`;
+}
+
+// functions to check answers
+function checkAnswer(selectedIndex) {
+
+    //Get the correct index of the current questions answer
+    const correctIndex = questions[currentQuestion].options.indexOf(questions[currentQuestion].correct);
+
+    //Check if the selected index matches the correct index
+    if (selectedIndex === correctIndex) {
+
+        //If the answer is correct, increment the user's score
+        score++;
+    }
+    //Check if there are more questions to display
+    if (currentQuestion < questions.length - 1) {
+        //If there are more questions, move to the next question and show it
+        currentQuestion++;
+        showQuestion();
+    } else {
+        showFinalPage();
+    }
+}
+
+// function to show final page
+
+function showFinalPage() {
+
+    //Get a reference to the final score element in the HTML
+    const finalScoreElement = document.getElementById("finalScore");
+
+    //Update the text content of the final score element with the user's score
+    finalScoreElement.textContent = `You scored ${score} out of ${questions.length}`;
+
+    //Hide the quiz page and show the final page
+    document.getElementById("quizPage").classList.add("hidden");
+    document.getElementById("final").classList.remove("hidden");
+}
+
+// function to show restart page
+function restartQuiz() {
+    document.getElementById("final").classList.add("hidden");
+    document.getElementById("start-page").classList.remove("hidden");
+}
+
+// function to show instruction page
+function showInstructions() {
+    document.getElementById("start-page").classList.add("hidden");
+    document.getElementById("instructions").classList.remove("hidden");
+}
+
+// function to go to the start page
+function goToStart() {
+    document.getElementById("start-page").classList.remove("hidden");
+    document.getElementById("quizPage").classList.add("hidden");
+    document.getElementById("instructions").classList.add("hidden");
+    document.getElementById("final").classList.add("hidden");
+}
+
+
+
 
 
 
