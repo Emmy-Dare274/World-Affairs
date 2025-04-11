@@ -1,16 +1,3 @@
-/**First Task
- * Create a maximum of 30 Questions Bank Array for the Quiz using let keyword
- * Create an array of objects to store the questions and answers
- * Each object should have the following properties:
- * - question: the question text
- * - options: an array of possible answers
- * - correctAnswer: the index of the correct answer in the answers array
- * Second Task
- * Creat variables
- * Create shuffled questions
- * Add all event listeners
- * Find and add necessary functions to initialize quiz
- */
 
 // A bank for quiz question Bank with let and const array object
 
@@ -307,4 +294,3 @@ function goToStart() {
     document.getElementById("instructions").classList.add("hidden");
     document.getElementById("final").classList.add("hidden");
 }
-
