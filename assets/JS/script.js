@@ -3,10 +3,13 @@
  * Create an array of objects to store the questions and answers
  * Each object should have the following properties:
  * - question: the question text
- * - answers: an array of possible answers
+ * - options: an array of possible answers
  * - correctAnswer: the index of the correct answer in the answers array
  * Second Task
- * 
+ * Creat variables
+ * Create shuffled questions
+ * Add all event listeners
+ * Find and add necessary functions to initialize quiz
  */
 
 // A bank for quiz question Bank with let and const array object
@@ -200,12 +203,12 @@ logo.addEventListener("click", function () {
 });
 
 
-// functions to shuffle array wit Fisher Yates
+// functions to shuffle array with Fisher Yates algorithm
 function shuffleArray(array) {
     return array.sort(() => Math.random() - 0.5);
 }
 
-// function to initialize game
+// function to initialize quiz game
 function startQuiz() {
     const shuffledQuestions = shuffleArray(questionsBank);
 
@@ -260,7 +263,7 @@ function checkAnswer(selectedIndex) {
         //If the answer is correct, increment the user's score
         score++;
     }
-    //Check if there are more questions to display
+    //Check for more questions to display
     if (currentQuestion < questions.length - 1) {
         //If there are more questions, move to the next question and show it
         currentQuestion++;
@@ -274,7 +277,7 @@ function checkAnswer(selectedIndex) {
 
 function showFinalPage() {
 
-    //Get a reference to the final score element in the HTML
+    //Get Ids to the final score element in the HTML
     const finalScoreElement = document.getElementById("finalScore");
 
     //Update the text content of the final score element with the user's score
@@ -305,70 +308,3 @@ function goToStart() {
     document.getElementById("final").classList.add("hidden");
 }
 
-
-
-
-
-
-
-
-
-
-
-/*function to show and hide instructions
-function showInstructions() {
-    document.getElementById('instructions').style.display = 'block';
-    document.getElementById('quiz-area').style.display = 'none';
-}
-function hideInstructions() {
-    document.getElementById('instructions').style.display = 'none';
-    document.getElementById('quiz-area').style.display = 'block';
-}
-
-}
-// Function to display a question and its answers
-function displayQuestion(question) {
-    questionElement.innerText = question.question;
-    answerButtons.forEach((button, index) => {
-        button.innerText = question.answers[index];
-        button.onclick = () => checkAnswer(index, question.correctAnswer);
-    });
-}
-// Function to check the answer
-function checkAnswer(selectedIndex, correctAnswer) {
-    if (answerButtons[selectedIndex].innerText === correctAnswer) {
-        scoreElement.innerText = 'Correct!';
-    } else {
-        scoreElement.innerText = 'Wrong!';
-    }
-}
-// Function to display the score
-function displayScore() {
-    const score = document.querySelectorAll('.correct').length;
-    scoreElement.innerText = `Your score: ${score}`;
-}
-// Shuffle the questions
-shuffle(questionBank);
-// Display the first question
-displayQuestion(questionBank[0]);
-// Event listener for the next button
-nextButton.addEventListener('click', () => {
-    const currentQuestionIndex = questionBank.indexOf(questionBank[0]);
-    if (currentQuestionIndex < questionBank.length - 1) {
-        displayQuestion(questionBank[currentQuestionIndex + 1]);
-    } else {
-        displayScore();
-    }
-});
-// Display the score button
-scoreButton.addEventListener('click', displayScore);
-
-// function to start the quiz
-function startQuiz() {
-    shuffle(questionBank);
-    displayQuestion(questionBank[0]);
-}
-// Start the quiz
-startQuiz();
-
-*/
