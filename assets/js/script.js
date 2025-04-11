@@ -1,4 +1,4 @@
-
+/* jshint esversion: 8 */
 // A bank for quiz question Bank with let and const array object
 
 let questions = [];
