@@ -15,7 +15,7 @@ body {
     padding: 0;
     color: #c2fcf2;
 }
-
+/* head styling with logo here */
 header {
     background-color: #3624477a;
     padding: 5px;
@@ -37,10 +37,10 @@ header p {
     color: #c2fcf2;
     cursor: pointer;
 }
-/* all Divs styling here */
+/* all 4 Divs with ID styling here */
 
-#start-quiz-area, #quiz-area, #instruction-area,
-#completed-area {
+#home, #quiz, #instructions,
+#final {
     background-color: #cfa0f13f;
     padding: 30px;
     /*min-height: 100%;*/
