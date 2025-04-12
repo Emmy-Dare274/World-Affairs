@@ -3,136 +3,94 @@
 
 # World Affairs Quiz Game!
 
+<strong>World Affairs Quiz game</strong> is where curiosity meets global awareness! Users embark on a thrilling journey through current trivia events, geopolitical puzzles, and cultural trivia. Whether they are news enthusiasts, students of the world, or simply eager to challenge their understanding of global dynamics, this interactive quiz game offers them a seamless blend of education and entertainment. 
+
 [World Affairs Quiz Game!](https://emmy-dare274.github.io/World-Affairs/) click the link to play quiz.
 
+## <strong>User Stories</strong>
+
+### First Time Visitor Goals:
+New users can instantly immerse themselves in world trivia without friction. As a new user, the goal is to try my knowledge about the current affairs of the world.
+
+### Returning Visitor Goals:
+Frequent users will experience a dynamic question bank that reshuffles to keep every quiz session unique and engaging. As a frequent user, the aim is to see how I can navigate through the quiz and get more engaging questions each time I try again.
 
 
-Welcome USER_NAME,
+## Features
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+### Home Page
+The home page comprises of a header, the Quiz page that comprises of two dinstinct buttons Play Quiz and Instruction button, and a Footer that links to 5 social media platforms.
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+## Quiz Screen
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### Footer
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+### Future ideas
+Given the constraints of an imminent deadline, further enhancements to the Quiz Game could not be implemented within the available timeframe. With additional development time, the following features would have significantly elevated user engagement and competitive appeal:
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+  - Create a reward section for the quiz game where user gets a reward for answering all questions correctly.
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+## Design and Color Scheme
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
+### Typography
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
 
-### Connecting your Mongo database
+## Technologies Used
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+### Languages
 
-------
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) used for body structure
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/css) used for styling.
+- [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) user for interaction with the DOM
 
-## Release History
+### Frameworks - Libraries - Programs Used
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- [Am I Responsive](https://ui.dev/amiresponsive) - Used for responsiveness of website on various screens.
+- [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) - Used for debugging and development of the app.
+- [Font Awesome](https://fontawesome.com/) - Used for social media icons.
+- [Google Fonts](https://fonts.google.com/) - Used to import Fonts.
+- [W3C](https://www.w3.org/) - Used for HTML & CSS Validation.
+- [JSHINT](https://jshint.com/) - used to validate javascript code.
+- [Coolors](https://coolors.co/) - Used to create colour palette.
+- [Favicon](https://favicon.io/) - Used to create the favicon.
+- [VSCode](https://code.visualstudio.com/) was used to write and edit the code.
+- [Git](https://git-scm.com/) - was used for the version control.
+- [GitHub](https://github.com/) - for storing the code.
+- [GitHub Pages](https://pages.github.com/) - for live view of the website.
 
-**June 18, 2024,** Add Mongo back into template
 
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
+## Testing
 
-**May 28 2024:** Fix Mongo and Links installs
+## Validator testing
+### HTML
+- No errors or warnings were found when passing through the official W3C validator.
+![HTML validator](assets/documentation/html_validator.png)
 
-**April 26 2024:** Update node version to 16
 
-**September 20 2023:** Update Python version to 3.9.17.
+### CSS
+- No errors or warnings were found when checked through the official W3C validator.
+![CSS Validator](assets/documentation/css_validator.png)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Javascript
+- No errors or warnings were found when checked through JSHINT.
+![Javascript Validator](assets/documentation/js_hint-validator.png)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Deployment
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+I deployed the project using GitHub pages:
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+- First clicked settings in my GitHub repository.
+- Then clicked 'pages' from the left-hand side of the page.
+- I selected Source - Deploy from the branch.
+- The main branch was selected and the folder was 'root'.
+- Under the branch, I clicked save.
+- I then went back to the code tab in the Environments section and clicked on GitHub Pages.
+- Then clicked on view deployments to see the live site.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
