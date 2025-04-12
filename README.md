@@ -72,7 +72,6 @@ Given the constraints of an imminent deadline, further enhancements to the Quiz 
 - No errors or warnings were found when passing through the official W3C validator.
 ![HTML validator](assets/documentation/html_validator.png)
 
-
 ### CSS
 - No errors or warnings were found when checked through the official W3C validator.
 ![CSS Validator](assets/documentation/css_validator.png)
