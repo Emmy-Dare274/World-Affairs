@@ -81,6 +81,11 @@ Given the constraints of an imminent deadline, further enhancements to the Quiz 
 - No errors or warnings were found when checked through JSHINT.
 ![Javascript Validator](assets/documentation/js_hint-validator.png)
 
+## Lighthouse report
+
+- lighthouse in devtools was used to check that the website is performing well, accessible and the colors and fonts chosen are readable.
+![Lighthouse Report](assets/documentation/Lighthouse_report.png)
+
 ## Deployment
 
 I deployed the project using GitHub pages:
