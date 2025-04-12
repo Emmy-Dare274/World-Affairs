@@ -1,4 +1,4 @@
-![World Affairs! Logo]()
+![World Affairs! Logo](assets/documentation/homescreen_responsive.png)
 
 
 # World Affairs Quiz Game!
