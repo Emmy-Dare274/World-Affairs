@@ -84,7 +84,8 @@ Given the constraints of an imminent deadline, further enhancements to the Quiz 
 ## Lighthouse report
 
 - lighthouse in devtools was used to check that the website is performing well, accessible and the colors and fonts chosen are readable.
-![Lighthouse Report](assets/documentation/Lighthouse_report.png)
+![Lighthouse Report](assets/documentation/Lighthouse_report.png) mobile screen
+![Lighthouse Report](assets/documentation/desktopView_Lighthouse_report.png) Desktop screen report
 
 ## Deployment
 
